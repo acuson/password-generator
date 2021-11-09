@@ -13,21 +13,24 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-var chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ !'#$%&()*+,-./:;<=>?@[]\^_`{|}~";
-var passwordLength = prompt("How long do you want your password to be?") 
-var password = "";
+// var chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ !'#$%&()*+,-./:;<=>?@[]\^_`{|}~";
 
-if (passwordLength < 8) {
-  confirm("The password must be at least 8 characters.");
-} else if (passwordLength > 128); {
-  confirm("The password must be no more than 128 characters.");
+// var password = "";
+
+function getPasswordInfo () {
+  var passwordLength = prompt("How long do you want your password to be?") 
+  if (passwordLength < 8) {
+    alert("The password must be at least 8 characters.");
+  } else if (passwordLength > 128); {
+    alert("The password must be no more than 128 characters.");
+  } 
+  var lower = confirm("Do you want to include lower case letters?");
+  var upper = confirm("Do you want to include upper case letters?");
+  var num = confirm("Do you want to include numbers?");
+  var special = confirm("Do you want to include speacial characters?");
 }
 
-var lower = confirm("Do you want to include lower case letters?");
-var upper = confirm("Do you want to include upper case letters?");
-var num = confirm("Do you want to include numbers?");
-var special = confirm("Do you want to include speacial characters?");
-
 function generatePassword () {
+  getPasswordInfo;
   return password;
 }
