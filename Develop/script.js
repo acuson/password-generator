@@ -12,3 +12,13 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+function generatePassword () {
+  var chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ !'#$%&()*+,-./:;<=>?@[]\^_`{|}~";
+  var passwordLength = []
+    for (var i = 8; i <= 128; i++) {
+      passwordLength.push
+    }
+  var password = "";
+  return password;
+}
