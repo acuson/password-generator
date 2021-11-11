@@ -17,20 +17,22 @@ generateBtn.addEventListener("click", writePassword);
 
 // var password = "";
 
-function getPasswordInfo () {
-  var passwordLength = prompt("How long do you want your password to be?") 
-  if (passwordLength < 8) {
-    alert("The password must be at least 8 characters.");
-  } else if (passwordLength > 128); {
-    alert("The password must be no more than 128 characters.");
-  } 
-  var lower = confirm("Do you want to include lower case letters?");
-  var upper = confirm("Do you want to include upper case letters?");
-  var num = confirm("Do you want to include numbers?");
-  var special = confirm("Do you want to include speacial characters?");
-}
+// function getPasswordInfo () {
+  
+// }
 
 function generatePassword () {
-  getPasswordInfo;
+  var passwordLength = prompt("How long do you want your password to be?") 
+  if (passwordLength < 8) {
+    alert("The password must be at least 8 characters.")
+  } else if (passwordLength > 128) {
+    alert("The password must be no more than 128 characters.")
+  } else (passwordLength >= 8, passwordLength <=128); {
+    var lower = confirm("Do you want to include lower case letters?");
+    var upper = confirm("Do you want to include upper case letters?");
+    var num = confirm("Do you want to include numbers?");
+    var special = confirm("Do you want to include speacial characters?");
+  }
+ 
   return password;
 }
