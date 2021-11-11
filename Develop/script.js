@@ -13,7 +13,7 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-// var chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ !'#$%&()*+,-./:;<=>?@[]\^_`{|}~";
+var chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ !'#$%&()*+,-./:;<=>?@[]\^_`{|}~";
 
 // var password = "";
 
@@ -22,6 +22,7 @@ generateBtn.addEventListener("click", writePassword);
 // }
 
 function generatePassword () {
+  
   var passwordLength = prompt("How long do you want your password to be?") 
   if (passwordLength < 8) {
     alert("The password must be at least 8 characters.")
@@ -33,6 +34,26 @@ function generatePassword () {
     var num = confirm("Do you want to include numbers?");
     var special = confirm("Do you want to include speacial characters?");
   }
+// Need these if/else statements?
+  if (lower === true) {
+    var lowerChar = "abcdefghijklmnopqrstuvwxyz"
+  } else (lower = fasle);
+
+  if (upper === true) {
+    var upperChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  } else (upper = false);
+
+  if (num === true) {
+    var numChar = "0123456789"
+  } else (num = false);
+
+  if (special === true) {
+    var specialChar = " !'#$%&()*+,-./:;<=>?@[]\^_`{|}~"
+  } else (special = false);
  
+  for (var i = 0; i <= passwordLength; i++) {
+    var randomNumber = Math.floor(Math.random() * chars.length);
+    password += chars.substring(randomNumber, randomNumber + 1);
+  }
   return password;
 }
