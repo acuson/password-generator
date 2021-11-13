@@ -52,8 +52,23 @@ function generatePassword () {
   } else (special = false);
  
   for (var i = 0; i <= passwordLength; i++) {
-    var randomNumber = Math.floor(Math.random() * chars.length);
-    password += chars.substring(randomNumber, randomNumber + 1);
+    var randomNumber = Math.floor(Math.random() * lowerChar.length);
+    password += lowerChar.substring(randomNumber, randomNumber + 1);
+  }
+
+  for (var i = 0; i <= passwordLength; i++) {
+    var randomNumber = Math.floor(Math.random() * upperChar.length);
+    password += upperChar.substring(randomNumber, randomNumber + 1);
+  }
+
+  for (var i = 0; i <= passwordLength; i++) {
+    var randomNumber = Math.floor(Math.random() * numChar.length);
+    password += numChar.substring(randomNumber, randomNumber + 1);
+  }
+
+  for (var i = 0; i <= passwordLength; i++) {
+    var randomNumber = Math.floor(Math.random() * specialChar.length);
+    password += specialChar.substring(randomNumber, randomNumber + 1);
   }
   return password;
 }
